@@ -120,7 +120,7 @@ This method will receive purchase data, along with user data.
 
 
 ### GET `/starstore/history`
-Esse método deve retornar todos as compras realizadas na API
+This method must return all purchases made on the API
 ```json
 [
    {
@@ -146,7 +146,7 @@ Esse método deve retornar todos as compras realizadas na API
    }
 ]
 ```
-| Campo            | Tipo   |
+| Field            | Type   |
 |------------------|--------|
 | card_number      | String |
 | cliend_id        | String |
@@ -155,7 +155,7 @@ Esse método deve retornar todos as compras realizadas na API
 | purchase_id      | String |
 
 ### GET `/starstore/history/{clientId}`
-Esse método deve retornar todos as compras realizadas na API por um cliente específico
+This method must return all purchases made on the API
 ```json
 [
    {
