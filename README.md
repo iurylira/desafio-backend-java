@@ -1,22 +1,22 @@
 ![StoneSDK](https://cloud.githubusercontent.com/assets/2567823/11539067/6300c838-990c-11e5-9831-4f8ce691859e.png)
 
-# Desafio Backend
+# Backend Challenge
 
-O desafio consiste em criar uma API REST para a loja de Star Wars que será consumida por um aplicativo (Android e iOS).
-Todos os itens serão colocados em um carrinho do lado do aplicativo e passados para a API para realizar uma transação e-commerce.
+The challenge is to create a REST API for the Star Wars store that will be consumed by an application (Android and iOS).
+All items will be placed in a cart on the application side and passed to the API to perform an e-commerce transaction.
 
-O candidato deve dar **fork** neste repositório e após o termino do desenvolvimento, realizar um **pull request** para análise do time.
+The candidate must **fork** this repository and after completion of development, make a **pull request** for the team to analyze.
 
-O candidato tem a liberdade de realizar o desafio com a tecnologia que achar melhor.
-Deverá informar quais tecnologias foram usadas, como instalar, rodar e efetuar os acessos no arquivo [`details.txt`](https://github.com/stone-pagamentos/desafio-backend/blob/master/details.txt) (se necessário) para análise do desafio.
+The candidate has the freedom to carry out the challenge with the technology they find best.
+You must inform which technologies were used, how to install, run and access the file [`details.txt`](https://github.com/stone-pagamentos/desafio-backend/bl
 
 ### Extra
-- Utilizar Cache
-- Autenticação nas requisições
-- Utilizar Docker
-
+- Use Cache
+- Authentication in requests
+- Use Docker
+  
 ### POST `/starstore/product`
-Esse método deve receber um produto novo e inseri-lo em um banco de dados para ser consumido pela própria API.
+This method must receive a new product and insert it into a database to be consumed by the API itself.
 ```json
 {
    "title":"Blusa do Imperio",
@@ -27,7 +27,7 @@ Esse método deve receber um produto novo e inseri-lo em um banco de dados para 
    "date":"26/11/2015"
 }
 ```
-| Campo       | Tipo   |
+| Field       | Type   |
 |-------------|--------|
 | title       | String |
 | price       | int    |
@@ -38,7 +38,7 @@ Esse método deve receber um produto novo e inseri-lo em um banco de dados para 
 
 
 ### GET `/starstore/products`
-Esse método da API deve retornar o seguinte JSON
+This API method must return the following JSON
 ```json
 [
   {
@@ -68,7 +68,7 @@ Esse método da API deve retornar o seguinte JSON
 ]
 ```
 
-| Campo       | Tipo   |
+| Field       | Type   |
 |-------------|--------|
 | title       | String |
 | price       | int    |
@@ -78,11 +78,11 @@ Esse método da API deve retornar o seguinte JSON
 | date        | String |
 
 
-Após o usuário adicionar todos os itens desejados no carrinho, ele finalizará a compra.
-Para isso, você precisará fazer o método `buy` na sua API.
+After the user adds all the desired items to the cart, they will complete the purchase.
+To do this, you will need to use the `buy` method in your API.
 
 ### POST `/starstore/buy`
-Esse método irá receber os dados da compra, junto com os dados do usuário.
+This method will receive purchase data, along with user data.
 ```json
 {
    "client_id":"7e655c6e-e8e5-4349-8348-e51e0ff3072e",
@@ -101,7 +101,7 @@ Esse método irá receber os dados da compra, junto com os dados do usuário.
 
 + Transaction
 
-| Campo        | Tipo       |
+| Field        | Type       |
 |--------------|------------|
 | client_id    | String     |
 | client_name  | String     |
@@ -110,7 +110,7 @@ Esse método irá receber os dados da compra, junto com os dados do usuário.
 
 + CreditCard
 
-| Campo            | Tipo   |
+| Field            | Type   |
 |------------------|--------|
 | card_number      | String |
 | card_holder_name | String |
